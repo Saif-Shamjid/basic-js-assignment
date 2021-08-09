@@ -1,13 +1,22 @@
 function seerToMon(seer){
+    if(seer<0){
+        return "Seer must be positive number!....please try again :("
+    }
     return seer/40;
 }
 
 function totalSales(shart,pant,shoe){
+    if(shart<0 || pant<0 || shoe<0){
+        return "Input must be positive number!....please try again :("
+    }
     var returnValue = (shart*100) + (pant*200) + (shoe*500);
     return returnValue; 
 }
 
 function deliveryCost(numberOfOrder){
+    if(numberOfOrder<0){
+        return "number of order must be positive number!....please try again :("
+    }
     var basicTotalCost;
     var basicCost = 100;
     var discountCost=0;
@@ -37,7 +46,5 @@ function perfectFriend(friendArr){
             break;
         }
     }
+    return "No friend with 5 character!"
 }
-
-arr = ["aaa","bbbbbb","aaaaaa"];
-console.log(perfectFriend(arr));
